@@ -1,0 +1,48 @@
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "captioning"
+version = "0.0.1"
+description = "This project belongs to Deep Learning Assignment 3 - VizWiz Validation Set Image Captioning Using PyTorch by group 19, authored by Shreyash, Bhavika, Kushal, Nakul and Rohan."
+authors = [
+  { name = "Shreyash Narayane (UTS)" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+dependencies = [
+    "ipython",
+    "jupyterlab",
+    "loguru",
+    "matplotlib",
+    "notebook",
+    "numpy",
+    "pandas",
+    "pip",
+    "pytest",
+    "python-dotenv",
+    "ruff",
+    "scikit-learn",
+    "tqdm",
+    "typer",
+]
+requires-python = "~=3.10.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["captioning"]
+include = ["pyproject.toml", "captioning/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["captioning"]
+force-sort-within-sections = true
+
